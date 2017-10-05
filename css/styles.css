@@ -5,15 +5,17 @@
 
 body {
   background: #F5F3EE;
-  font-family: 'Alegreya', serif;
+  font-family: 'Alegreya', Georgia, serif;
 }
 
 header {
   background: #7D1935;
-  color: white;
+  color: #F5F3EE;
   width: 100%;
   text-transform: uppercase;
   text-align: center;
+  font-family: 'Pathway Gothic One', Impact, sans-serif;
+  font-size: 1.5em;
 }
 
 .container, .contact-info {
@@ -45,6 +47,7 @@ button {
 
 legend {
   font-size: 1.25em;
+  font-family: 'Alegreya SC', 'Alegreya', Georgia, serif;
   font-weight: bold;
 
 }
@@ -53,13 +56,13 @@ legend {
   text-align: center;
   width: 95%;
   margin-bottom: 1.3em;
+  font-family: 'Alegreya SC', 'Alegreya', Georgia, serif;
 }
 
 .form-header p {
   font-size: 1.3em;
     margin-top: -.8em;
     margin-bottom: 2.6em;
-    font-family: 'Lato', sans-serif;
 }
 
 
@@ -114,18 +117,13 @@ input, select, textarea {
 
 .contact-info .item {
   margin-top: 1em;
-  font-family: 'Lato', sans-serif;
 }
 
-.contact-info label, .newsletter > label {
+.contact-info label {
   display: inline-block;
 }
 
 /*------------newsletter Styles-----------*/
 .newsletter .item {
-  margin-bottom: 1em;
+  line-height: 1.8em;
 };
-
-.newsletter > label {
-  margin-top: 10px;
-}
