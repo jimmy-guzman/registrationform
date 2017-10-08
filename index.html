@@ -7,9 +7,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/normalize.css">
-  <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Alegreya+SC" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 </head>
 
 <body>
@@ -20,7 +18,7 @@
     </header>
     <div class="item form-header border">
       <h2>Signup for our newsletter</h2>
-      <p>Get the latest news on how your code is doing right in your inbox</p>
+      <h3>Get the latest news on how your code is doing right in your inbox</h3>
     </div>
     <form action="index.html" method="post">
 
@@ -40,17 +38,17 @@
 
         <div class="item">
           <label for="number">Phone Number</label>
-          <input type="tel" id="number" name="user_number">
+          <input type="tel" id="number" name="user_number" placeholder="555-555-1234">
         </div>
 
         <div class="item">
           <label for="address">Street Address</label>
-          <input type="text" id="address" name="user_address">
+          <input type="text" id="address" name="user_address" placeholder="123 Street Name">
         </div>
 
         <div class="item">
           <label for="city">City</label>
-          <input type="text" id="city" name="user_city">
+          <input type="text" id="city" name="user_city" placeholder="City Name">
         </div>
 
         <div class="item">
@@ -113,7 +111,7 @@
 
         <div class="item">
           <label for="zipcode">Zip Code</label>
-          <input type="text" id="zipcode" name="user_zipcode" pattern="[0-9]{5}" />
+          <input type="text" id="zipcode" name="user_zipcode" pattern="[0-9]{5}" placeholder="12345">
         </div>
 
       </fieldset>
@@ -123,7 +121,7 @@
         <legend>Newsletter</legend>
 
 
-        <label> Select the newsletters you would like to receive </label>
+        <label class="question"> Select the newsletters you would like to receive </label>
 
         <div class="item">
           <input type="checkbox" id="html_news" value="css_news" name="user_news">
@@ -139,7 +137,7 @@
         </div>
 
 
-        <label> Newsletter Format </label>
+        <label class="question"> Newsletter Format </label>
 
         <div class="item">
           <input type="radio" id="html" value="html" name="newsletter_format">
@@ -156,11 +154,14 @@
           <textarea id="comment" name="user_comment" rows="5"> </textarea>
         </div>
 
-        <button type="submit">Sign Up</button>
+        <input class="btn" type="submit" value="Sign Up">
 
       </fieldset>
 
     </form>
+    <footer>
+      <h4> Copyright The Code Review</h4>
+    </footer>
   </div>
 </body>
 
