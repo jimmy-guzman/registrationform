@@ -1,31 +1,32 @@
 /*------------Base Styles-----------*/
+
 * {
   box-sizing: border-box;
 }
 
-
 body {
-  background: #F5F3EE;
+  background: #DAEBF2;
   font-family: 'Merriweather', serif;
   font-size: 18px;
+  color: #012c40;
 }
 
 header {
-  background: #7D1935;
+  background: #012c40;
   width: 100%;
   text-align: center;
   padding: .8em 0;
 }
 
 h1 {
-  color: #F5F3EE;
+  color: #fff;
   font-size: 1.296em;
   text-transform: uppercase;
 }
 
 fieldset {
   border: none;
-width: 100%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -43,7 +44,7 @@ h3 {
   font-size: 1em;
   margin-top: -.8em;
   margin-bottom: 2.6em;
-  color: #A8A293;
+  color: #00708C;
   font-weight: lighter;
   line-height: 1.4;
 }
@@ -54,15 +55,32 @@ input, select, textarea {
   padding-left: 2%;
   padding-top: 1em;
   padding-bottom: 1em;
-  border-bottom: .3em solid #A8A293;
-  transition: border-bottom 2s;
+  border-bottom: .3em solid #012c40;
+  transition: border-bottom 2s, background-color 3s;
   resize: none;
 }
+
 /*----------fomr-header-style----*/
+
 .form-header {
   text-align: center;
   margin-bottom: 1.3em;
   padding: 0 2%;
+}
+
+.border {
+  border-bottom: 3px solid #012C40;
+  position: relative;
+}
+
+.border:before {
+  border-bottom: 5px solid #012C40;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 2px;
 }
 
 /*----------Button Styels----------*/
@@ -70,8 +88,8 @@ input, select, textarea {
 .btn {
   margin-top: 1em;
   font-size: 1.296em;
-  color: #F5F3EE;
-  background: #4A96AD;
+  color: #fff;
+  background: #FF404C;
   width: 100%;
   border: none;
   padding: 1.1em;
@@ -84,6 +102,7 @@ input, select, textarea {
 }
 
 /*----------Container Styles---------------------*/
+
 .container {
   width: 90%;
   margin: auto;
@@ -98,32 +117,16 @@ input, select, textarea {
   width: 100%;
 }
 
-
 /*------------Contact Information Styles-----------*/
-
-.border {
-  border-bottom: 3px solid #7D1935;
-  position: relative;
-}
-
-.border:before {
-  border-bottom: 5px solid #7D1935;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 2px;
-}
 
 .contact-info {
   margin-bottom: 1.3em;
   padding: 0 2% 1.9em;
-  border-bottom: 3px solid #7D1935;
+  border-bottom: 3px solid #012C40;
 }
 
-input[required]::placeholder{
-  color: #A8A293;
+input[required]::placeholder {
+  color: #1CA5B8;
   text-align: right;
   text-transform: capitalize;
   padding-right: 2%;
@@ -131,14 +134,16 @@ input[required]::placeholder{
   font-size: 0.937em;
 }
 
+select {
+  color: #00708C;
+}
+
 input::placeholder {
-  color: #A8A293;
+  color: #1CA5B8;
   padding-right: 2%;
   font-size: 0.937em;
   font-style: italic;
 }
-
-
 
 .contact-info div {
   margin-top: 1em;
@@ -152,7 +157,8 @@ input::placeholder {
 
 input:focus, textarea:focus, select:focus {
   outline: none;
-  border-bottom: .3em solid #7D1935;
+  border-bottom: .3em solid #FF404C;
+  background-color: #fff;
 }
 
 input[type="text"]:focus+label {
@@ -170,13 +176,11 @@ input[type="text"]:focus+label {
   width: 50%;
 }
 
-label[for]:focus,
-label[for]:active {
-    font-weight: bold;
+label[for]:focus, label[for]:active {
+  font-weight: bold;
 }
+
 /*------------newsletter Styles-----------*/
-
-
 
 .newsletter legend {
   margin-left: -.6em;
@@ -194,16 +198,12 @@ fieldset>label {
   line-height: 1.6;
 }
 
-input[type="radio"] {
-  background: #F5F3EE;
-}
-
 input[type="checkbox"]+label, input[type="radio"]+label {
   padding-left: 1%;
 }
 
 input[type="checkbox"]:checked+label, input[type="radio"]:checked+label {
-  color: #7D1935;
+  color: #ff404c;
   font-weight: bold;
 }
 
@@ -216,7 +216,7 @@ footer {
 h4 {
   font-size: 0.878em;
   font-style: italic;
-  color: #A8A293;
+  color: #00708C;
   text-align: center;
   font-weight: lighter;
 }
@@ -225,37 +225,27 @@ h4 {
 
 @media (min-width: 768px) {
   .container {
-    width: 55%
+    width: 65%
   }
 
-
-  fieldset {
-    width: 100%;
+  body{
+    font-size: 16px;
   }
   .contact-info div {
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-start;
   }
-
   .contact-info label {
     margin: auto 0;
     width: 10%;
-    min-width: 10em;
-
+    min-width: 8.8em;
   }
-
   .contact-info input, .contact-info select {
     width: 90%;
-
   }
-
   #zipcode {
     width: 35%;
-  }
-
-  .zipcode label {
-    margin-right: 0;
   }
 
 }
