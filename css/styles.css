@@ -1,8 +1,8 @@
 /*------------Base Styles-----------*/
-
 * {
   box-sizing: border-box;
 }
+
 
 body {
   background: #F5F3EE;
@@ -25,7 +25,7 @@ h1 {
 
 fieldset {
   border: none;
-  width: 95%;
+width: 100%;
   margin: 0 auto;
 }
 
@@ -54,8 +54,9 @@ input, select, textarea {
   padding-left: 2%;
   padding-top: 1em;
   padding-bottom: 1em;
-  border-bottom: 3px solid #F5F3EE;
+  border-bottom: .3em solid #A8A293;
   transition: border-bottom 2s;
+  resize: none;
 }
 /*----------fomr-header-style----*/
 .form-header {
@@ -117,11 +118,11 @@ input, select, textarea {
 
 .contact-info {
   margin-bottom: 1.3em;
-  padding: 0 2% 1.6em;
+  padding: 0 2% 1.9em;
   border-bottom: 3px solid #7D1935;
 }
 
-input[required]::placeholder {
+input[required]::placeholder{
   color: #A8A293;
   text-align: right;
   text-transform: capitalize;
@@ -151,7 +152,7 @@ input::placeholder {
 
 input:focus, textarea:focus, select:focus {
   outline: none;
-  border-bottom: 3px solid #7D1935;
+  border-bottom: .3em solid #7D1935;
 }
 
 input[type="text"]:focus+label {
@@ -164,7 +165,18 @@ input[type="text"]:focus+label {
   margin-bottom: .8em;
 }
 
+#zipcode {
+  display: block;
+  width: 50%;
+}
+
+label[for]:focus,
+label[for]:active {
+    font-weight: bold;
+}
 /*------------newsletter Styles-----------*/
+
+
 
 .newsletter legend {
   margin-left: -.6em;
@@ -216,21 +228,34 @@ h4 {
     width: 55%
   }
 
-  body {
-    font-size: 14px;
-  }
+
   fieldset {
     width: 100%;
   }
   .contact-info div {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
+    justify-content: flex-start;
   }
 
   .contact-info label {
     margin: auto 0;
-    width: 11em;
+    width: 10%;
+    min-width: 10em;
+
   }
 
+  .contact-info input, .contact-info select {
+    width: 90%;
+
+  }
+
+  #zipcode {
+    width: 35%;
+  }
+
+  .zipcode label {
+    margin-right: 0;
+  }
 
 }
