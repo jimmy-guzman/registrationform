@@ -58,6 +58,7 @@ input, select, textarea {
   border-bottom: .3em solid #012c40;
   transition: border-bottom 2s, background-color 3s;
   resize: none;
+  border-radius: .9em;
 }
 
 /*----------fomr-header-style----*/
@@ -134,11 +135,11 @@ input[required]::placeholder {
   font-size: 0.937em;
 }
 
-select {
+select{
   color: #00708C;
 }
 
-input::placeholder {
+input::placeholder, textarea::placeholder {
   color: #1CA5B8;
   padding-right: 2%;
   font-size: 0.937em;
